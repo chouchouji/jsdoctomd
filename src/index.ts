@@ -2,6 +2,7 @@ import { parse } from 'comment-parser'
 import esprima from 'esprima'
 import fs from 'fs'
 import { generateMD } from './generate'
+import { getFileType } from './utils'
 
 function getFormatJsdoc(comment: string): {
   description: string
@@ -81,7 +82,9 @@ function parseFile(file: string) {
 }
 
 export function jsdocToMD(options: { entry: string; output: string }) {
-  const file = fs.readFileSync(options.entry, 'utf-8')
+  const { entry, output } = options
+  const file = fs.readFileSync(entry, 'utf-8')
+  const fileType = getFileType(entry)
 
   const parsedFiles = parseFile(file)
 
@@ -91,8 +94,8 @@ export function jsdocToMD(options: { entry: string; output: string }) {
     const { description, returnType, args } = getFormatJsdoc(comment)
     const functionName = getFunctionName(content)
 
-    return generateMD({ functionName, content, description, returnType, args })
+    return generateMD({ functionName, content, description, returnType, args, fileType })
   })
 
-  fs.writeFileSync(options.output, mds.join('\n').trim(), 'utf-8')
+  fs.writeFileSync(output, mds.join('\n').trim(), 'utf-8')
 }

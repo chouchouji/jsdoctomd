@@ -12,15 +12,16 @@ export function generateMD(func: {
   content: string
   args: any[]
   returnType: string
+  fileType: string
 }): string {
-  const { functionName, description, content, args, returnType } = func
+  const { functionName, description, content, args, returnType, fileType } = func
 
   return `
 # ${functionName}
       
 ${description}
       
-\`\`\`js
+\`\`\`${fileType}
 ${content.trim()}
 \`\`\`
       
