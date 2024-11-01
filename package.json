@@ -17,6 +17,7 @@
   "scripts": {
     "dev": "tsup --watch",
     "build": "tsup",
+    "docs:generate": "gulp",
     "format": "prettier --write .",
     "lint": "eslint . --fix --ext .ts,.js",
     "clean": "rimraf node_modules"
@@ -34,6 +35,8 @@
     "@types/node": "^22.8.6",
     "@varlet/eslint-config": "^3.6.3",
     "eslint": "8.x",
+    "gulp": "^5.0.0",
+    "gulp-rename": "^2.0.0",
     "prettier": "^3.3.3",
     "rimraf": "^6.0.1",
     "tsup": "^8.3.5",
