@@ -3,7 +3,11 @@ import esprima from 'esprima'
 import fs from 'fs'
 import { generateMD } from './generate'
 
-function getFormatJsdoc(comment: string): { description: string; returnType: string; args: any[] } {
+function getFormatJsdoc(comment: string): {
+  description: string
+  returnType: string
+  args: any[]
+} {
   const [jsdoc] = parse(comment)
 
   const returns = jsdoc.tags.find((item) => item.tag === 'returns')
@@ -35,7 +39,7 @@ function getFunctionName(content: string): string {
     }
 
     const { type, value } = lastToken
-    const isFunction = type === 'Keyword' && value === 'function'
+    const isFunction = type === 'Keyword' && ['function', 'const'].includes(value)
 
     if (tokens[i].type === 'Identifier' && isFunction) {
       functionName = tokens[i].value
