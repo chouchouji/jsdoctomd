@@ -1,11 +1,20 @@
 # isNotEmptyArray
       
 判断数据是否为非空数组
+
+### Source Code
       
 ```js
 export function isNotEmptyArray(value) {
   return Array.isArray(value) && value.length > 0
 }
+```
+
+### Usage
+
+```js
+isNotEmptyArray([]) // false
+isNotEmptyArray([1]) // true
 ```
       
 ### Arguments
@@ -24,12 +33,18 @@ export function isNotEmptyArray(value) {
 # normalizeToArray
       
 将数据转化为数组
+
+### Source Code
       
 ```js
 export function normalizeToArray(value) {
   return Array.isArray(value) ? value : [value]
 }
 ```
+
+### Usage
+
+
       
 ### Arguments
       
@@ -47,6 +62,8 @@ export function normalizeToArray(value) {
 # uniq
       
 数组去重
+
+### Source Code
       
 ```js
 export function uniq(value) {
@@ -57,6 +74,10 @@ export function uniq(value) {
   return value
 }
 ```
+
+### Usage
+
+
       
 ### Arguments
       

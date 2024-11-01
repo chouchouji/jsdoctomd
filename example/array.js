@@ -1,5 +1,10 @@
 /**
  * 判断数据是否为非空数组
+ * @example
+ * ```js
+ * isNotEmptyArray([]) // false
+ * isNotEmptyArray([1]) // true
+ * ```
  * @param {*} value 数据
  * @returns {boolean}
  */

@@ -1,6 +1,8 @@
 # isURL
       
 判断是否为字符串
+
+### Source Code
       
 ```ts
 export function isURL(val: string | undefined | null): boolean {
@@ -11,6 +13,10 @@ export function isURL(val: string | undefined | null): boolean {
   return /^(http)|(\.*\/)/.test(val)
 }
 ```
+
+### Usage
+
+
       
 ### Arguments
       
@@ -28,12 +34,18 @@ export function isURL(val: string | undefined | null): boolean {
 # isArray
       
 判断某个值是否为数组
+
+### Source Code
       
 ```ts
 export function isArray(val: unknown): val is Array<any> {
   return Array.isArray(val)
 }
 ```
+
+### Usage
+
+
       
 ### Arguments
       
@@ -51,12 +63,18 @@ export function isArray(val: unknown): val is Array<any> {
 # isEmpty
       
 判断某个值是否为空
+
+### Source Code
       
 ```ts
 export function isEmpty(val: unknown) {
   return val === undefined || val === null || val === '' || (isArray(val) && !val.length)
 }
 ```
+
+### Usage
+
+
       
 ### Arguments
       
@@ -74,10 +92,16 @@ export function isEmpty(val: unknown) {
 # isString
       
 判断某个值是否为字符串类型
+
+### Source Code
       
 ```ts
 export const isString = (val: unknown): val is string => typeof val === 'string'
 ```
+
+### Usage
+
+
       
 ### Arguments
       

@@ -2,16 +2,29 @@ import { parse } from 'comment-parser'
 import esprima from 'esprima'
 import fs from 'fs'
 import { generateMD } from './generate'
-import { getFileType } from './utils'
+import { getFileType, isEmpty } from './utils'
+
+function formatExample(sources: string[]) {
+  if (isEmpty(sources)) {
+    return ''
+  }
+
+  return sources
+    .filter((item) => !item.includes('@example'))
+    .map((item) => item.slice(3))
+    .join('\n')
+}
 
 function getFormatJsdoc(comment: string): {
   description: string
   returnType: string
   args: any[]
+  example: string
 } {
   const [jsdoc] = parse(comment)
 
   const returns = jsdoc.tags.find((item) => item.tag === 'returns')
+  const example = jsdoc.tags.find((item) => item.tag === 'example')
   const args = jsdoc.tags
     .filter((item) => item.tag === 'param')
     .map((item) => ({
@@ -25,6 +38,7 @@ function getFormatJsdoc(comment: string): {
   return {
     description: jsdoc.description,
     returnType: returns?.type || 'void',
+    example: example?.source ? formatExample(example.source.map((item) => item.source)) : '',
     args,
   }
 }
@@ -91,10 +105,10 @@ export function jsdocToMD(options: { entry: string; output: string }) {
   const mds = parsedFiles.map((file) => {
     const { comment, content } = file
 
-    const { description, returnType, args } = getFormatJsdoc(comment)
+    const { description, returnType, args, example } = getFormatJsdoc(comment)
     const functionName = getFunctionName(content)
 
-    return generateMD({ functionName, content, description, returnType, args, fileType })
+    return generateMD({ functionName, content, description, returnType, args, fileType, example })
   })
 
   fs.writeFileSync(output, mds.join('\n').trim(), 'utf-8')
