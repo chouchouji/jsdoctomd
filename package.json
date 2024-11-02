@@ -35,7 +35,7 @@
     "@types/esprima": "^4.0.6",
     "@types/node": "^22.8.6",
     "@varlet/eslint-config": "^3.6.3",
-    "@varlet/release": "^0.3.0",
+    "@varlet/release": "^0.3.1",
     "eslint": "8.x",
     "gulp": "^5.0.0",
     "gulp-rename": "^2.0.0",
