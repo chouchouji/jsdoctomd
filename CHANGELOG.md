@@ -1,4 +1,8 @@
-## 0.0.1 (2024-11-02)
+## [0.0.2](https://github.com/chouchouji/jsdoctomd/compare/v0.0.1...v0.0.2) (2024-11-02)
+
+
+
+## [0.0.1](https://github.com/chouchouji/jsdoctomd/compare/48bdb1dcbed128cf6e65e036198b0c3407bf539e...v0.0.1) (2024-11-02)
 
 
 ### Features
