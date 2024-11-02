@@ -1,5 +1,5 @@
 {
-  "name": "jsdoctomd",
+  "name": "@binbinji/jsdoctomd",
   "version": "0.0.1",
   "description": "A tool that converts JS or TS files with JSDoc comments into markdown.",
   "type": "module",
