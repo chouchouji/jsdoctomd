@@ -1,6 +1,6 @@
 import fs from 'fs'
 import { fileURLToPath } from 'url'
-import { jsdocToMD } from '../dist/index.js'
+import { jsdocToMD } from '@binbinji/jsdoctomd'
 
 function generateMD() {
   const examplePath = fileURLToPath(new URL('../example', import.meta.url))

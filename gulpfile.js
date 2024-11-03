@@ -1,7 +1,7 @@
 import { src, dest } from 'gulp'
 import rename from 'gulp-rename'
 import { Transform } from 'stream'
-import { jsdocToMD } from './dist/index.js'
+import { jsdocToMD } from '@binbinji/jsdoctomd'
 
 function generateMDFiles() {
   return src('example/*.{ts,js}')

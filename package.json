@@ -42,6 +42,7 @@
   "author": "chouchouji 1305974212@qq.com",
   "license": "MIT",
   "devDependencies": {
+    "@binbinji/jsdoctomd": "latest",
     "@types/esprima": "^4.0.6",
     "@types/node": "^22.8.6",
     "@varlet/eslint-config": "^3.6.3",
