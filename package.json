@@ -47,5 +47,6 @@
   "dependencies": {
     "comment-parser": "^1.4.1",
     "esprima": "^4.0.1"
-  }
+  },
+  "packageManager": "pnpm@9.1.1"
 }

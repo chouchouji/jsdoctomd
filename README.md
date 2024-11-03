@@ -61,6 +61,8 @@ generateMD()
 You can also use [gulp](https://gulpjs.com/) to automate workflow.
 
 ```js
+// gulpfile.js
+
 import { src, dest } from 'gulp'
 import rename from 'gulp-rename'
 import { Transform } from 'stream'
