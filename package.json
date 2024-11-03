@@ -29,6 +29,9 @@
     "Javascript",
     "Typescript"
   ],
+  "files": [
+    "dist"
+  ],
   "author": "chouchouji 1305974212@qq.com",
   "license": "MIT",
   "devDependencies": {
