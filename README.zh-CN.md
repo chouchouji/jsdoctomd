@@ -1,12 +1,12 @@
 <h1 align="center">jsdoctomd</h1>
 
-English | [简体中文](README.zh-CN.md)
+简体中文 | [English](README.md)
 
-## Intro
+## 介绍
 
-`jsdoctomd` is a tool that converts JS or TS files with JSDoc comments into markdown.
+`jsdoctomd` 是一个可以将带有JSDoc注释的JS或TS文件转换为markdown的工具。
 
-## Installation
+## 安装
 
 ```shell
 # npm
@@ -17,7 +17,7 @@ yarn add @binbinji/jsdoctomd -D
 pnpm add @binbinji/jsdoctomd -D
 ```
 
-## Example
+## 示例
 
 ### JS
 ![js example](https://github.com/user-attachments/assets/2d6e56e3-467d-45f3-902e-c53ab4737a5f)
@@ -26,11 +26,11 @@ pnpm add @binbinji/jsdoctomd -D
 
 ![ts example](https://github.com/user-attachments/assets/1bcf0079-25ae-4552-aaf9-39204884afb2)
 
-## Usage
+## 使用指南
 
-### Use javascript script
+### js脚本
 
-You can write a javascript file to read file, parse and generate related md files.
+可以通过js脚本读文件，转化，生成md文件。 
 
 ```js
 import fs from 'fs'
@@ -58,9 +58,9 @@ function generateMD() {
 generateMD()
 ```
 
-### Use gulp
+### 使用gulp
 
-You can also use [gulp](https://gulpjs.com/) to automate workflow.
+也可以使用 [gulp](https://gulpjs.com/) 来自动化工作流。
 
 ```js
 // gulpfile.js
