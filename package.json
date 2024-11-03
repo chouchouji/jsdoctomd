@@ -20,7 +20,7 @@
     "docs:generate": "gulp",
     "format": "prettier --write .",
     "lint": "eslint . --fix --ext .ts,.js",
-    "clean": "rimraf node_modules",
+    "clean": "rimraf node_modules dist docs",
     "release": "pnpm build && vr release"
   },
   "keywords": [

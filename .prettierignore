@@ -4,4 +4,4 @@ pnpm-lock.yaml
 .gitignore
 .prettierignore
 
-docs
+*.md
