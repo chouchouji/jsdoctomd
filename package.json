@@ -32,6 +32,13 @@
   "files": [
     "dist"
   ],
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/chouchouji/jsdoctomd.git"
+  },
+  "bugs": {
+    "url": "https://github.com/chouchouji/jsdoctomd/issues"
+  },
   "author": "chouchouji 1305974212@qq.com",
   "license": "MIT",
   "devDependencies": {
