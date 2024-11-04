@@ -1,12 +1,17 @@
+## [0.0.5](https://github.com/chouchouji/jsdoctomd/compare/v0.0.4...v0.0.5) (2024-11-04)
+
+
+### Features
+
+* support custom generate function ([29237e1](https://github.com/chouchouji/jsdoctomd/commit/29237e144c22efd57bff286af61040c14995c342))
+
+
+
 ## [0.0.4](https://github.com/chouchouji/jsdoctomd/compare/v0.0.3...v0.0.4) (2024-11-03)
 
 
 
-## [0.0.3](https://github.com/chouchouji/jsdoctomd/compare/v0.0.2...v0.0.3) (2024-11-03)
-
-
-
-## [0.0.2](https://github.com/chouchouji/jsdoctomd/compare/v0.0.1...v0.0.2) (2024-11-02)
+## [0.0.3](https://github.com/chouchouji/jsdoctomd/compare/v0.0.1...v0.0.3) (2024-11-03)
 
 
 
