@@ -1,7 +1,8 @@
 import { parse } from 'comment-parser'
 import esprima from 'esprima'
 import { generateMD } from './generate'
-import { isEmpty } from './utils'
+import { isEmpty, isFunction } from './utils'
+import { generateFunction } from './type'
 
 function formatExample(sources: string[]) {
   if (isEmpty(sources)) {
@@ -94,8 +95,8 @@ function parseFile(file: string) {
   return result.filter(Boolean)
 }
 
-export function jsdocToMD(options: { input: string; extname: string }) {
-  const { input, extname } = options
+export function jsdocToMD(options: { input: string; extname: string; generate: (func: generateFunction) => string }) {
+  const { input, extname, generate } = options
 
   const parsedFiles = parseFile(input)
 
@@ -104,6 +105,10 @@ export function jsdocToMD(options: { input: string; extname: string }) {
 
     const { description, returnType, args, example } = getFormatJsdoc(comment)
     const functionName = getFunctionName(content)
+
+    if (isFunction(generate)) {
+      return generate({ functionName, content, description, returnType, args, extname, example })
+    }
 
     return generateMD({ functionName, content, description, returnType, args, extname, example })
   })

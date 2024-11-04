@@ -1,3 +1,5 @@
+import { generateFunction } from './type'
+
 function formatType(types: string) {
   if (types.includes('|')) {
     return types.split('|').map((type) => type.trim())
@@ -6,15 +8,7 @@ function formatType(types: string) {
   return [types]
 }
 
-export function generateMD(func: {
-  functionName: string
-  description: string
-  content: string
-  args: any[]
-  returnType: string
-  extname: string
-  example: string
-}): string {
+export function generateMD(func: generateFunction): string {
   const { functionName, description, content, args, returnType, extname, example } = func
 
   return `
