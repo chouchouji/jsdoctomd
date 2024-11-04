@@ -26,6 +26,14 @@ pnpm add @binbinji/jsdoctomd -D
 
 ![ts example](https://github.com/user-attachments/assets/1bcf0079-25ae-4552-aaf9-39204884afb2)
 
+## API
+
+| 参数 | 类型 | 是否可选 | 默认值 | 描述 |
+| --- | --- | --- | --- | --- |
+| `input` | `string` | `false` | `-` | `想解析的文件内容` |
+| `extname` | `string` | `false` | `-` | `文件类型，比如js或者ts` |
+| `generate` | `(func: generateFunction) => string` | `true` | `-` | `自定义markdown格式` |
+
 ## 使用指南
 
 ### js脚本

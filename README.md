@@ -26,6 +26,14 @@ pnpm add @binbinji/jsdoctomd -D
 
 ![ts example](https://github.com/user-attachments/assets/1bcf0079-25ae-4552-aaf9-39204884afb2)
 
+## API
+
+| Arg | Type | Optional | Default | Description |
+| --- | --- | --- | --- | --- |
+| `input` | `string` | `false` | `-` | `the file content you want to parse` |
+| `extname` | `string` | `false` | `-` | `the file extname, such as js or ts` |
+| `generate` | `(func: generateFunction) => string` | `true` | `-` | `custom your markdown content` |
+
 ## Usage
 
 ### Use javascript script

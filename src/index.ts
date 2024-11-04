@@ -95,7 +95,7 @@ function parseFile(file: string) {
   return result.filter(Boolean)
 }
 
-export function jsdocToMD(options: { input: string; extname: string; generate: (func: generateFunction) => string }) {
+export function jsdocToMD(options: { input: string; extname: string; generate?: (func: generateFunction) => string }) {
   const { input, extname, generate } = options
 
   const parsedFiles = parseFile(input)
