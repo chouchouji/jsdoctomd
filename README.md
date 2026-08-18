@@ -1,3 +1,5 @@
+
+
 <h1 align="center">jsdoctomd</h1>
 
 English | [简体中文](README.zh-CN.md)
@@ -31,7 +33,7 @@ pnpm add @binbinji/jsdoctomd -D
 | Arg | Type | Optional | Default | Description |
 | --- | --- | --- | --- | --- |
 | `input` | `string` | `false` | `-` | `the file content you want to parse` |
-| `extname` | `string` | `false` | `-` | `the file extname, such as js or ts` |
+| `extname` | `string` | `false` | `-` | `the file extname without the leading dot, such as js or ts` |
 | `generate` | `(func: generateFunction) => string` | `true` | `-` | `custom your markdown content` |
 
 ## Usage
